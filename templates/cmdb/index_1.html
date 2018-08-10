@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资产总表</title>
+</head>
+<body>
+
+
+<h2>h资产总表</h2>
+
+
+<table border="2px">
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+                <th>NO</th>
+                <th>Organization</th>
+                <th>SN</th>
+                <th>Model</th>
+			</tr>
+             {% for b in Asset %}
+                 <tr>
+                     <td>b.pk</td>
+                     <td>{{ b.asset_name }}</td>
+                     <td>{{ b.asset_no }}</td>
+                     <td>{{ b.organization }}</td>
+                     <td>{{ b.sn }}</td>
+                     <td>{{ b.model}}</td>
+                 </tr>
+                {% endfor %}
+		</table>
+
+
+{{ asset_name }}
+
+</body>
+</html>

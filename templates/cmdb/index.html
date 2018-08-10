@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asset</title>
+</head>
+<body>
+
+
+<p>你好，这是测试页面</p>
+
+{##}
+{#    <table>#}
+{#        <th>pk</th>#}
+{#        <th></th>#}
+{#        <th></th>#}
+{#        <th></th>#}
+{#        <th></th>#}
+{#        <td>b.pk</td>#}
+{#        <td>b.asset_name</td>#}
+{#        <td>b.asset_no</td>#}
+{#        <td>b.organization</td>#}
+{#        <td>b.sn</td>#}
+{#        <td>b.model</td>#}
+{#    </table>#}
+
+
+
+
+<table border="2px">
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+                <th>NO</th>
+                <th>Organization</th>
+                <th>SN</th>
+                <th>Model</th>
+			</tr>
+             {% for b in Asset %}
+                 <tr>
+                     <td>b.pk</td>
+                     <td>{{ b.asset_name }}</td>
+                     <td>{{ b.asset_no }}</td>
+                     <td>{{ b.organization }}</td>
+                     <td>{{ b.sn }}</td>
+                     <td>{{ b.model}}</td>
+                 </tr>
+                {% endfor %}
+		</table>
+
+
+{{ asset_name }}
+
+</body>
+</html>
